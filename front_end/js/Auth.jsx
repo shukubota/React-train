@@ -4,3 +4,12 @@ import ReactDom from 'react-dom'
 import Counter from './counter/Counter'
 import Signin from './Signin'
 import Style from './App.css'
+
+export default class Auth extends Component {
+
+  render(){
+    return (
+      ddd
+    )
+  }
+}
