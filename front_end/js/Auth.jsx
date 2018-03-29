@@ -6,10 +6,24 @@ import Signin from './Signin'
 import Style from './App.css'
 
 export default class Auth extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      user: {
+        email: '',
+        password: ''
+      },
+      isSignIn: false
+    }
+  }
 
-  render(){
+  render () {
+    const { user, isSignIn } = this.state
+    console.log(user)
     return (
-      ddd
+      <div>
+        <Signin user={user} />
+      </div>
     )
   }
 }
