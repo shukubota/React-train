@@ -15,6 +15,7 @@ export default class SignIn extends Component {
   }
 
   componentDidMount () {
+    console.log(this.props)
     let {user} = this.props
     this.setState({user})
   }
@@ -35,7 +36,8 @@ export default class SignIn extends Component {
       .set('Content-Type', 'application/json')
       .send(data)
       .then((res) => {
-        console.log(res)
+        console.log(res.body)
+        this.props.signIn(res.body.user)
       })
       .catch((err) => {
         console.log(err)
