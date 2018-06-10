@@ -3,7 +3,6 @@ import ReactDom from 'react-dom'
 
 import Add from './Add'
 import Reduce from './Reduce'
-import Header from './Header'
 import Style from '../App.css'
 
 export default class Counter extends Component {
@@ -35,7 +34,7 @@ export default class Counter extends Component {
     var {history} = this.state
     countNumber -= 1
     this.setState({countNumber})
-    const addWords = this.getTime() + '足した'
+    const addWords = this.getTime() + '引いた'
     history.push(addWords)
     this.setState(history)
    }
